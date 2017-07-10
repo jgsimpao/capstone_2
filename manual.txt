@@ -1,0 +1,27 @@
+Admin account
+Username: admin
+Password: 1234
+
+Before successful login:
+--> Login page (login to access the site)
+--> Registration page (register new account)
+
+After successful login:
+--> User Account (top right of menu)
+    --> Change Password
+    --> Admin Inbox (admin access only)
+        --> View inquiries, torrent reports, comment reports
+	--> Delete inquiry or report
+	--> Update reported torrent or comment
+    --> Logout
+
+--> Home (view latest torrent uploads - last 24 hours)
+--> About
+--> Browse
+    --> Search torrents
+    --> View torrent details
+    --> Download torrent
+    --> Add comment
+
+--> Upload (upload new torrent)
+--> Contact (send inquiry to admin)

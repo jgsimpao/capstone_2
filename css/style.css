@@ -1,0 +1,318 @@
+/*----- Fonts & Texts -----*/
+
+@font-face {
+	font-family: amaranth;
+	src: url("../fonts/amaranth/Amaranth-Regular.ttf");
+}
+
+@font-face {
+	font-family: titilliumweb;
+	src: url("../fonts/titilliumweb/TitilliumWeb-Regular.ttf");
+}
+
+h1, h4,
+.navbar ul > li > a {
+	font-family: amaranth, "Trebuchet MS", sans-serif;
+}
+
+p,
+label {
+	font-family: titilliumweb, "Lucida Sans Unicode", sans-serif;
+	font-size: 16px;
+}
+
+
+/*----- Header -----*/
+
+header > div:first-child {
+	height: 50px;
+	background-color: #013567;
+}
+
+header > div:last-child {
+	background-color: #e1e3e5;
+}
+
+header > div:last-child [class*="col-"]:nth-child(1) {
+	height: 150px;
+	z-index: 1;
+}
+
+header > div:last-child [class*="col-"]:nth-child(2) {
+	height: 75px;
+	z-index: 1;
+}
+
+header > div:last-child [class*="col-"]:nth-child(3) {
+	height: 75px;
+}
+
+header > div:last-child .brand {
+	height: 100%;
+}
+
+header > div:last-child .user {
+	text-align: right;
+	margin-top: 20px;
+	/*margin-right: 150px;*/
+}
+
+header > div:last-child .user > img {
+	height: 30px;
+}
+
+
+/*----- Nav -----*/
+
+.navbar ul > li > a {
+	font-size: 24px;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.navbar ul > li > a {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 992px) {
+	.navbar ul > li > a {
+		font-size: 22px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.navbar ul > li > a {
+		font-size: 24px;
+	}
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #e1e3e5;
+}
+
+.navbar > .navbar-collapse {
+	margin-top: 20px;
+	padding: 0;
+}
+
+
+/*----- Main: All -----*/
+
+html,
+body {
+	height: 100%;
+}
+
+.wrapper {
+	position: relative;
+	z-index: 1;
+	min-height: 100%;
+}
+
+.heading {
+	text-align: center;
+	margin-top: 75px;
+}
+
+main {
+	position: relative;
+	z-index: -1;
+	padding-bottom: 150px;
+}
+
+main .panel {
+	border-color: #1b6bb8;
+}
+
+main .panel > .panel-heading,
+main .panel > .panel-footer {
+	background-color: #1b6bb8;
+}
+
+main .input-group-btn > .btn {
+	padding: 12px 0;
+	width: 100px;
+}
+
+main .input-group-btn > .btn > img {
+	height: 40px;
+}
+
+main .odd-row {
+	background-color: #fdfdfd;
+}
+
+main .even-row {
+	background-color: #e1e3e5;
+}
+
+
+/*----- Main: Login
+			  Registration
+			  Change Password -----*/
+
+.login > .panel,
+.registration > .panel,
+.change_pass > .panel {
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+}
+
+.login .input-group,
+.login .btn,
+.registration .input-group,
+.change_pass .input-group {
+	margin-bottom: 10px;
+}
+
+.login img,
+.registration img,
+.change_pass img {
+	height: 18px;
+}
+
+
+/*----- Main: Torrent
+			  Upload
+			  Contact
+			  Issue -----*/
+
+.torrent .form-control,
+.upload .form-control,
+.contact .form-control,
+.issue .form-control {
+	margin-bottom: 10px;
+}
+
+.torrent .row > div:first-child {
+	border-right: 1px solid #eee;
+}
+
+.upload .after-file,
+.issue .after-file {
+	margin-top: 10px;
+}
+
+
+/*----- Main: Browse -----*/
+
+.browse .basic-search > .btn {
+	padding: 5px 0;
+	width: 100px;
+}
+
+.browse .basic-search > .btn > img {
+	height: 22px;
+}
+
+/*----- Footer -----*/
+
+footer {
+	height: 75px;
+	background-color: #013567;
+	color: #fdfdfd;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+footer > p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+/*----- Modal: Cover -----*/
+
+/* Image Used to Trigger the Modal */
+#cover {
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#cover:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Content (Image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#cover-caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #cover-caption {
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+	from {-webkit-transform:scale(0)}
+	to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+	from {transform:scale(0)}
+	to {transform:scale(1)}
+}
+
+/* The Close Button */
+#cover-close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+#cover-close:hover,
+#cover-close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+	.modal-content {
+		width: 100%;
+	}
+}
