@@ -10,13 +10,13 @@
 	src: url("../fonts/titilliumweb/TitilliumWeb-Regular.ttf");
 }
 
-h1, h4,
-.navbar ul > li > a {
+h1, h2, h3, h4, h5,
+.username {
 	font-family: amaranth, "Trebuchet MS", sans-serif;
 }
 
-p,
-label {
+p, label,
+.navbar ul > li > a {
 	font-family: titilliumweb, "Lucida Sans Unicode", sans-serif;
 	font-size: 16px;
 }
@@ -53,37 +53,56 @@ header > div:last-child .brand {
 
 header > div:last-child .user {
 	text-align: right;
-	margin-top: 20px;
-	/*margin-right: 150px;*/
+	margin-top: 40px;
 }
 
-header > div:last-child .user > img {
+header > div:last-child .alert {
 	height: 30px;
+	padding: 0;
+	margin: 0;
+}
+
+header > div:last-child .avatar {
+	height: 34px;
+	padding-left: 5px;
+}
+
+header .username {
+	font-size: 26px;
+}
+
+header > div:last-child .badge {
+	background-color: #df4a32;
+}
+
+header > div:last-child .user > .dropdown {
+	display: inline-block;
 }
 
 
 /*----- Nav -----*/
 
 .navbar ul > li > a {
-	font-size: 24px;
+	font-size: 26px;
 	text-align: center;
+	font-weight: bold;
 }
 
 @media (min-width: 768px) {
-	.navbar ul > li > a {
-		font-size: 20px;
-	}
-}
-
-@media (min-width: 992px) {
 	.navbar ul > li > a {
 		font-size: 22px;
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
 	.navbar ul > li > a {
 		font-size: 24px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.navbar ul > li > a {
+		font-size: 26px;
 	}
 }
 
@@ -114,12 +133,12 @@ body {
 
 .heading {
 	text-align: center;
-	margin-top: 75px;
 }
 
 main {
 	position: relative;
 	z-index: -1;
+	margin-top: 75px;
 	padding-bottom: 150px;
 }
 
@@ -130,12 +149,73 @@ main .panel {
 main .panel > .panel-heading,
 main .panel > .panel-footer {
 	background-color: #1b6bb8;
+	border-radius: 0;
 }
 
 main .input-group-btn > .btn {
-	padding: 12px 0;
-	width: 100px;
+	padding: 20px 0;
+	width: 70px;
 }
+
+main .list-item h4 {
+	font-size: 14px;
+}
+
+main .list-item p {
+	font-size: 12px;
+}
+
+main .list-heading {
+	margin-left: 70px;
+}
+
+@media (min-width: 768px) {
+	main .input-group-btn > .btn {
+		padding: 20px 0;
+		width: 80px;
+	}
+
+	main .list-item p {
+		margin-top: 9px;
+	}
+
+	main .list-heading {
+		margin-left: 100px;
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	main .input-group-btn > .btn {
+		padding: 12px 0;
+		width: 90px;
+	}
+
+	main .list-item h4 {
+		font-size: 16px;
+	}
+
+	main .list-item p {
+		font-size: 14px;
+		margin-top: 4px;
+	}
+}
+
+@media (min-width: 1200px) {
+	main .input-group-btn > .btn {
+		width: 100px;
+	}
+
+	main .list-item h4 {
+		font-size: 18px;
+	}
+
+	main .list-item p {
+		font-size: 16px;
+		margin-top: 0;
+	}
+}
+
 
 main .input-group-btn > .btn > img {
 	height: 40px;
@@ -147,6 +227,14 @@ main .odd-row {
 
 main .even-row {
 	background-color: #e1e3e5;
+}
+
+.modal-backdrop {
+	z-index: -1;
+}
+
+.modal-dialog {
+	margin-top: 150px;
 }
 
 
@@ -176,6 +264,19 @@ main .even-row {
 }
 
 
+/*----- Main: Home
+			  About -----*/
+
+.home figure {
+	float: left;
+	margin: 15px 15px;
+}
+
+.about .brand {
+	font-weight: bold;
+}
+
+
 /*----- Main: Torrent
 			  Upload
 			  Contact
@@ -188,8 +289,8 @@ main .even-row {
 	margin-bottom: 10px;
 }
 
-.torrent .row > div:first-child {
-	border-right: 1px solid #eee;
+.torrent .report-icon {
+	height: 24px;
 }
 
 .upload .after-file,
@@ -197,17 +298,90 @@ main .even-row {
 	margin-top: 10px;
 }
 
+.upload .input-group img,
+.issue .input-group img {
+	height: 18px;
+}
 
-/*----- Main: Browse -----*/
+.issue .file-name {
+	padding-top: 0;
+}
 
-.browse .basic-search > .btn {
+.issue .btn {
+	margin: 0 3px;
+}
+
+
+/*----- Main: Browse
+			  Admin -----*/
+
+.browse .basic-search .btn {
 	padding: 5px 0;
 	width: 100px;
 }
 
-.browse .basic-search > .btn > img {
+.browse .basic-search .btn > img {
 	height: 22px;
 }
+
+.browse .basic-search,
+.browse .advanced-search,
+.browse .checkbox-inline,
+.browse .advanced-btn {
+	margin-bottom: 20px;
+}
+
+.browse .checkbox-inline {
+	width: 75px;
+	margin-left: 0;
+	margin-right: 25px;
+}
+
+
+.browse .input-group-btn > .anime {
+	background-color: #cf2d33;
+}
+
+.browse .input-group-btn > .apps {
+	background-color: #1db954;
+}
+
+.browse .input-group-btn > .books {
+	background-color: #f6921e;
+}
+
+.browse .input-group-btn > .games {
+	background-color: #00aff0;
+}
+
+.browse .input-group-btn > .movies {
+	background-color: #4b67a1;
+}
+
+.browse .input-group-btn > .music {
+	background-color: #ea4c89;
+}
+
+.browse .input-group-btn > .tv {
+	background-color: #2d5be3;
+}
+
+.browse .input-group-btn > .other {
+	background-color: #506256;
+}
+
+.admin .input-group-btn > .inquiry {
+	background-color: #45bbff;
+}
+
+.admin .input-group-btn > .torrent {
+	background-color: #a4c639;
+}
+
+.admin .input-group-btn > .comment {
+	background-color: #ffb000;
+}
+
 
 /*----- Footer -----*/
 
@@ -259,7 +433,8 @@ footer > p {
 	margin: auto;
 	display: block;
 	width: 80%;
-	max-width: 700px;
+	max-width: 480px;
+	margin-top: 100px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */

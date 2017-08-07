@@ -5,6 +5,7 @@
 
 	function display_content() {
 		echo '<main class="registration container">
+				  <h1 class="heading">' . get_title() . '</h1>
 				  <div class="panel panel-default">
 					  <div class="panel-heading"></div>
 					  <div class="panel-body">
@@ -42,7 +43,7 @@
 								  <input type="email" class="form-control" name="conf_email" placeholder="Confirm Email">
 							  </div>
 							  <div>
-								  <input type="submit" class="btn btn-default" name="register" value="Register">
+								  <input type="submit" class="btn btn-primary" name="register" value="Register">
 								  <input type="reset" class="btn btn-default" value="Reset">
 							  </div>
 						  </form>

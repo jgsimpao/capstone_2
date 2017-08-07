@@ -24,7 +24,6 @@
 <?php
 		require_once('partials/header.php');
 		require_once('partials/alert.php');
-		echo '<h1 class="heading">' . get_title() . '</h1>';
 		display_content();
 		require_once('partials/footer.php');
 ?>

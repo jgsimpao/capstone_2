@@ -5,6 +5,7 @@
 
 	function display_content() {
 		echo '<main class="change_pass container">
+				  <h1 class="heading">' . get_title() . '</h1>
 				  <div class="panel panel-default">
 					  <div class="panel-heading"></div>
 					  <div class="panel-body">
@@ -29,7 +30,7 @@
 								  <input type="password" class="form-control" name="conf_password" placeholder="Confirm New Password">
 							  </div>
 							  <div>
-								  <input type="submit" class="btn btn-default" name="change_pass" value="Submit">
+								  <input type="submit" class="btn btn-primary" name="change_pass" value="Submit">
 								  <input type="reset" class="btn btn-default" value="Reset">
 							  </div>
 						  </form>

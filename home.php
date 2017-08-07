@@ -4,26 +4,10 @@
 	}
 
 	function display_content() {
-		global $ascend;
-
-		echo '<main class="home container">';
-			  require_once('partials/alert.php');
-
-			echo '<div class="panel panel-default">
-					  <div class="panel-heading">
-					  	  <a href="';
-					  	  if($ascend)
-					  	  	  echo '?ascend=subject';
-					  	  else
-					  	  	  echo '?descend=subject';
-					  	  echo '">Subject</a>
-					  	  <a href="';
-					  	  if($ascend)
-					  	  	  echo '?ascend=date_created';
-					  	  else
-					  	  	  echo '?descend=date_created';
-					  	  echo '">Date Created</a>
-					  </div>
+		echo '<main class="home container">
+				  <h1 class="heading">' . get_title() . '</h1>
+				  <div class="panel panel-default">
+					  <div class="panel-heading"></div>
 					  <div class="panel-body">';
 						  list_items('home');
 				echo '</div>
